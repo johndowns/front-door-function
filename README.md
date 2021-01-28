@@ -35,3 +35,7 @@ By default these are Australia, New Zealand, and also any traffic that is from a
 Due to the way Front Door works with ARM templates, the Front Door instance is deployed twice.
 The first time, it is deployed without a rules engine.
 The template then deploys the rules engine, and then re-deploys the Front Door with the rules engine attached.
+
+## Deployment note
+Sometimes the first deployment of this template will fail due to an internal race condition in the Front Door deployment.
+If this happens, please simply retry the deployment.
